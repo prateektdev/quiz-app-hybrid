@@ -1,0 +1,51 @@
+
+<ion-header [translucent]="true" class="background_img">
+  <ion-toolbar class="background_img">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Wallet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+<div class="listbx">
+   
+   <div class="text_bs">
+
+     <ion-list class="list_new" lines="none">
+
+      <div class="back_item" *ngFor="let item of [].constructor(2); let i = index">
+
+        
+
+
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/wr.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+          <h4>Game Wallet</h4>
+          <p>(Winning for all contests come in this wallet)</p>
+          <p>$0.00</p>
+        </div>
+        <ion-button class="prime" color="tertiary">View Details</ion-button>
+      </ion-item>
+
+      </div>
+
+
+
+    </ion-list>
+   </div>
+  
+
+   <br>
+
+
+
+</div>
+
+</ion-content>

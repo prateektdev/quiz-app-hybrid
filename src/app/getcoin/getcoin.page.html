@@ -1,0 +1,53 @@
+
+<ion-header [translucent]="true" class="background_img">
+  <ion-toolbar class="background_img">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+<div class="listbx">
+   
+   <div class="text_bs">
+
+    <h4>Now get extra coins by doing any of the following activities:</h4>
+     
+
+     <ion-list class="list_new" lines="none" routerLink="/quiz">
+
+      <div class="back_item" *ngFor="let item of [].constructor(2); let i = index">
+
+        
+
+
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/coin.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+          <p>Verify your email id & get <span class="color_yel">10 coins</span></p>
+        </div>
+        <ion-button class="prime" color="tertiary">Verify Now</ion-button>
+      </ion-item>
+
+      </div>
+
+
+
+    </ion-list>
+   </div>
+  
+
+   <br>
+
+
+
+</div>
+
+<div class="mg_5 color_ent">Your Coin Wallet balance: <img class="coin" src="/assets/icon/coin.png"> <span>50</span></div>
+
+</ion-content>

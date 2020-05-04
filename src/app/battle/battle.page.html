@@ -1,0 +1,73 @@
+
+<ion-header [translucent]="true" class="background_img">
+  <ion-toolbar class="background_img">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Battle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+<div class="listbx">
+   
+   <div class="text_bs">
+
+    <h4>GK Battle</h4>
+     
+
+     <ion-list class="list_new" lines="none" routerLink="/quiz">
+
+      <div class="back_item" *ngFor="let item of [].constructor(2); let i = index">
+
+         <ion-row>
+          <ion-col size="6" class="left">
+            <h5>2 Player Battle<span class="green">Live</span></h5>
+          </ion-col>
+          <ion-col size="6" class="right">
+            <p>Play now, your opponent is waiting...</p>
+          </ion-col>
+        </ion-row>
+
+
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/gk.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+          <img src="/assets/icon/trophy.png">
+          <p>Play & Win: <span>$150</span></p>
+        </div>
+      </ion-item>
+
+      <ion-row>
+          <ion-col size="4">
+            <h5 class="green">84454 Users playing</h5>
+          </ion-col>
+          <ion-col size="4">
+           <div class="mg_5 color_ent">Entry <img class="coin" src="/assets/icon/coin.png"> <span>$50</span></div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button class="prime" color="tertiary">Play Now</ion-button>
+          </ion-col>
+        </ion-row>
+
+      </div>
+
+
+
+    </ion-list>
+   </div>
+  
+
+   <br>
+
+
+
+</div>
+
+
+
+</ion-content>

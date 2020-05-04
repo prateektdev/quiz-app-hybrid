@@ -1,0 +1,53 @@
+ion-content.background{
+    --background:transparent;
+}
+ion-header.background_img{
+    --background:transparent;
+}
+ion-toolbar.background_img{
+    --background:transparent;
+}
+ion-modal{
+	--background: var(--ion-background-color, transparent);
+}
+#ion-overlay-1 {
+	--background: transparent;
+}
+
+ion-modal{
+ --ion-background-color:transparent;
+
+}
+.sc-ion-modal-md-h{
+  --ion-background-color:transparent;
+}
+.sc-ion-modal-md-h.sc-ion-modal-md-s.phone-modal.hydrated.show-modal {
+	--background: var(--ion-background-color, #0000);
+}
+.modal_nw {
+	margin: 150px 0 0;
+	position: relative;
+}
+.not_div {
+	background: #fff;
+	padding: 10px;
+	width: 60px;
+	margin: 0 auto;
+	border-radius: 50px;
+	transform: translateY(30px);
+	z-index: +111;
+}
+.not_div img {
+	width: 55px;
+}
+ion-list{
+	border-radius: 10px;
+}
+.close-icon {
+	position: absolute;
+	top: 75px;
+	z-index: 111;
+	right: 10px;
+	font-size: 20px;
+	cursor: pointer;
+}

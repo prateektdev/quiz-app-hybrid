@@ -1,0 +1,113 @@
+<ion-header [translucent]="true" class="background_img">
+  <ion-toolbar class="background_img">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+<div class="listbx">
+   
+   <div class="text_bs">
+
+
+   	 <ion-list class="list_new" lines="none">
+
+      <div class="back_item back_item2" *ngFor="let item of [].constructor(1); let i = index">
+
+         
+
+
+      <ion-item class="item_new">
+
+        <div class="right_sed">
+          <img src="/assets/icon/cricketplyer.png">
+          <br>
+          <p>player Name</p>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="right_sed">
+          <img src="/assets/icon/cricketplyer.png">
+          <br>
+          <p>player Name</p>
+        </div>
+
+      </ion-item>
+
+      <ion-row>
+          
+          <ion-col size="12" class="center">
+           <div class="mg_5 color_ent color_ent2">15420 Played this match</div>
+          </ion-col>
+          
+        </ion-row>
+
+      </div>
+
+
+
+    </ion-list>
+
+     <ion-list class="list_new" lines="none" routerLink="/quiz">
+
+      <div class="back_item" *ngFor="let item of [].constructor(10); let i = index">
+
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/que.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+          <p>Rajeev kumar Thapak
+          	<br>
+          	<span class="color_yel">10 Points</span></p>
+        </div>
+        <p><span class="color_yel">$50</span></p>
+      </ion-item>
+
+      </div>
+
+
+
+    </ion-list>
+   </div>
+  
+
+   <br>
+
+
+
+</div>
+
+<div class="mg_5 color_ent">
+	     <ion-list class="list_new" lines="none" routerLink="/quiz">
+
+      <div class="back_item3" *ngFor="let item of [].constructor(1); let i = index">
+
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/cri.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+          <p>Your profile Name
+          	<br>
+          	<span class="po">10 Points</span></p>
+        </div>
+        <p><span class="">$50</span></p>
+      </ion-item>
+
+      <p>check your performance</p>
+
+      </div>
+
+
+
+    </ion-list>
+</div>
+
+</ion-content>

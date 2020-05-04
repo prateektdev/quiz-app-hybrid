@@ -217,3 +217,36 @@ ion-toolbar ion-chip {
 	margin-top: 8px;
 	margin-left: 10px;
 }
+
+ion-card-header{
+	padding: 5px;
+}
+ion-card-title{
+	font-size: 15px;
+}
+ion-card-content {
+	padding: 0px 0 10px 5px;
+	font-size: 11px;
+}
+.action-card {
+	margin: 2px;
+}
+.item_new_2{
+	--background: transparent;
+}
+.item_new_2 ion-button{
+	width: 100%;
+	height: 40px;
+	margin: 10px;
+	text-transform: capitalize;
+	font-size: 15px;
+	--text-align: left;
+}
+.que p{
+	padding: 35px 15px 15px;
+	line-height: 25px;
+	font-size: 20px;
+	color: #fff;
+	margin: 0 0 10px;
+	text-align:center;
+}

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" class="background_img">
   <ion-toolbar class="background_img">
     <ion-buttons slot="start">
-      <ion-menu-button color="white"></ion-menu-button>
+      <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
    <ion-row class="">
      <ion-col size="4" class=""><ion-title class="title">Home</ion-title></ion-col>
@@ -10,7 +10,7 @@
      </ion-col>
      <ion-col size="4" class="">
        <ion-chip outline color="white">
-            <ion-label>Get free Coins</ion-label>
+            <ion-label routerLink="/getcoin">Get free Coins</ion-label>
       </ion-chip>
      </ion-col>
    </ion-row>
@@ -23,7 +23,7 @@
 <ion-content class="background">
 
 	<ion-row class="top_ico">
-    <ion-col size="4" class="center">
+    <ion-col size="4" class="center" routerLink="/earnwallet">
       <p class="mg_5">Game Wallet</p>
       <p class="mg_5 font_size_r">$00</p>
     </ion-col>
@@ -31,7 +31,7 @@
       <p class="mg_5">Referral Wallet</p>
       <p class="mg_5 font_size_r">$00</p>
     </ion-col>
-    <ion-col size="4" class="center">
+    <ion-col size="4" class="center" routerLink="/coinwallet">
       <p class="mg_5">Coin Wallet</p>
       <div class="mg_5 coin_class"><img class="coin" src="/assets/icon/coin.png"> <span class="font_size_r">$00</span></div>
     </ion-col>
@@ -53,23 +53,23 @@
        
     </ion-segment-button>
    
-    <ion-segment-button value="celeb" class="segment-main">
+    <ion-segment-button value="exam" class="segment-main">
       <img class="coin2" src="/assets/icon/ex.png">
       <ion-label class="segment-label">Exam<br>Prep</ion-label>
        
     </ion-segment-button>
-    <ion-segment-button value="word" class="segment-main">
+    <ion-segment-button value="celeb" class="segment-main">
       <img class="coin2" src="/assets/icon/cel.png">
       <ion-label class="segment-label">Celeb<br>Quiz</ion-label>
        
     </ion-segment-button>
-    <ion-segment-button value="vs" class="segment-main">
+    <ion-segment-button value="word" class="segment-main">
       <img class="coin2" src="/assets/icon/wr.png"> 
       <ion-label class="segment-label">Word<br>Power</ion-label>
        
     </ion-segment-button>
 
-     <ion-segment-button value="exam" class="segment-main">
+     <ion-segment-button value="vs" class="segment-main">
       <img class="coin2" src="/assets/icon/vsb.png">
       <ion-label class="segment-label">Vs<br>Battle</ion-label>
        
@@ -79,7 +79,7 @@
   <div [ngSwitch]="type">
     <ion-list routerLink="/detail" class="list_new" *ngSwitchCase="'play'" lines="none">
 
-      <div href="/detail" class="back_item" *ngFor="let item of [].constructor(6); let i = index">
+      <div href="/detail" class="back_item" *ngFor="let item of [].constructor(3); let i = index">
 
          <ion-row>
           <ion-col size="6" class="left">
@@ -120,9 +120,9 @@
 
     </ion-list>
 
-    <ion-list class="list_new" *ngSwitchCase="'crick'" lines="none">
+    <ion-list routerLink="/detail" class="list_new" *ngSwitchCase="'crick'" lines="none">
 
-      <div class="back_item" *ngFor="let item of [].constructor(6); let i = index">
+      <div class="back_item" *ngFor="let item of [].constructor(2); let i = index">
 
          <ion-row>
           <ion-col size="6" class="left">
@@ -163,9 +163,9 @@
 
     </ion-list>
 
-    <ion-list class="list_new" *ngSwitchCase="'pred'" lines="none">
+    <ion-list routerLink="/predetail" class="list_new" *ngSwitchCase="'pred'" lines="none">
 
-      <div class="back_item" *ngFor="let item of [].constructor(6); let i = index">
+      <div class="back_item" *ngFor="let item of [].constructor(2); let i = index">
 
          <ion-row>
           <ion-col size="6" class="left-1">
@@ -220,7 +220,52 @@
 
     </ion-list>
 
-    <ion-list class="list_new" *ngSwitchCase="'celeb'" lines="none">
+
+<ion-list class="list_new" routerLink="/detail" *ngSwitchCase="'exam'" lines="none">
+
+      <div class="back_item" *ngFor="let item of [].constructor(1); let i = index">
+
+         <ion-row>
+          <ion-col size="6" class="left">
+            <h5>GK Quiz <span class="green">Live</span></h5>
+          </ion-col>
+          <ion-col size="6" class="right">
+            <p>(Winner Announcement:01:30pm)</p>
+          </ion-col>
+        </ion-row>
+
+
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/gk.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+          <img src="/assets/icon/trophy.png">
+          <p>Play & Win: <span>$150</span></p>
+        </div>
+      </ion-item>
+
+      <ion-row>
+          <ion-col size="4">
+            <h5 class="green">84454 Users playing</h5>
+          </ion-col>
+          <ion-col size="4">
+           <div class="mg_5 color_ent">Entry <img class="coin" src="/assets/icon/coin.png"> <span>$50</span></div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button class="prime" color="tertiary">Play Now</ion-button>
+          </ion-col>
+        </ion-row>
+
+      </div>
+
+
+
+    </ion-list>
+
+
+    <ion-list class="list_new" routerLink="/detail" *ngSwitchCase="'celeb'" lines="none">
 
       <div class="back_item" *ngFor="let item of [].constructor(6); let i = index">
 
@@ -263,6 +308,66 @@
 
     </ion-list>
 
+    <ion-list class="list_new" routerLink="/detail" *ngSwitchCase="'word'" lines="none">
+
+      <div class="question">
+
+        
+
+        <div class="que">
+          <p>Question is here, Question is here, Question is here,?</p>
+        </div>
+
+
+        <ion-item class="item_new item_new_2">
+            <ion-button routerLink="/result" expand="block" color="light">Option 1</ion-button>
+          </ion-item>
+          <ion-item class="item_new item_new_2">
+            <ion-button routerLink="/result" expand="block" color="light">Option 2</ion-button>
+          </ion-item>
+
+      </div>
+
+    </ion-list>
+
+    <ion-list class="list_new" routerLink="/detail" *ngSwitchCase="'vs'" lines="none">
+
+      <div class="" *ngFor="let item of [].constructor(3); let i = index">
+
+         <ion-row>
+
+          <ion-col size="6">
+
+            <ion-card class="action-card" routerLink="/battle">
+          <img class="header-img" src="/assets/icon/gki.jpg" />
+          <ion-card-header>
+            <ion-card-title>GK Battle</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Coin contest runnung..
+          </ion-card-content>
+        </ion-card>
+            
+          </ion-col>
+
+          <ion-col size="6">
+            <ion-card class="action-card" routerLink="/battle">
+          <img class="header-img" src="/assets/icon/gki.jpg" />
+          <ion-card-header>
+            <ion-card-title>GK Battle</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Coin contest runnung..
+          </ion-card-content>
+        </ion-card>
+          </ion-col>
+
+        </ion-row>
+
+      </div>
+
+    </ion-list>
+
 
   </div>
 
@@ -271,7 +376,7 @@
 
 
 <div class="ion-padding-horizontal">
-          <ion-chip outline color="white">
+          <ion-chip routerLink="/winnerlist" outline color="white">
             <ion-label>recent winners</ion-label>
           </ion-chip>
           <ion-chip outline color="white">

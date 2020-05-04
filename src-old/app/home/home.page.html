@@ -1,0 +1,285 @@
+<ion-header [translucent]="true" class="background_img">
+  <ion-toolbar class="background_img">
+    <ion-buttons slot="start">
+      <ion-menu-button color="white"></ion-menu-button>
+    </ion-buttons>
+   <ion-row class="">
+     <ion-col size="4" class=""><ion-title class="title">Home</ion-title></ion-col>
+     <ion-col size="4" class="center">
+       <img class="coin3" (click)="OpenModal()" src="/assets/icon/alarm.png">
+     </ion-col>
+     <ion-col size="4" class="">
+       <ion-chip outline color="white">
+            <ion-label>Get free Coins</ion-label>
+      </ion-chip>
+     </ion-col>
+   </ion-row>
+    
+          
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background">
+
+	<ion-row class="top_ico">
+    <ion-col size="4" class="center">
+      <p class="mg_5">Game Wallet</p>
+      <p class="mg_5 font_size_r">$00</p>
+    </ion-col>
+    <ion-col size="4" class="center">
+      <p class="mg_5">Referral Wallet</p>
+      <p class="mg_5 font_size_r">$00</p>
+    </ion-col>
+    <ion-col size="4" class="center">
+      <p class="mg_5">Coin Wallet</p>
+      <div class="mg_5 coin_class"><img class="coin" src="/assets/icon/coin.png"> <span class="font_size_r">$00</span></div>
+    </ion-col>
+  </ion-row>
+
+  <ion-content class="background">
+  <ion-segment class="segment-main-dv" color="primary" [(ngModel)]="type" (ionChange)="segmentChanged($event)" >
+    <ion-segment-button value="play" checked class="segment-main">
+      <img class="coin2" src="/assets/icon/que.png">
+      <ion-label class="segment-label">Play<br>Quiz</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="crick" class="segment-main">
+      <img class="coin2" src="/assets/icon/cri.png">
+      <ion-label class="segment-label">Cricket<br>Quiz</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="pred" class="segment-main">
+      <img class="coin2" src="/assets/icon/pre.png">
+      <ion-label class="segment-label">Prediction</ion-label>
+       
+    </ion-segment-button>
+   
+    <ion-segment-button value="celeb" class="segment-main">
+      <img class="coin2" src="/assets/icon/ex.png">
+      <ion-label class="segment-label">Exam<br>Prep</ion-label>
+       
+    </ion-segment-button>
+    <ion-segment-button value="word" class="segment-main">
+      <img class="coin2" src="/assets/icon/cel.png">
+      <ion-label class="segment-label">Celeb<br>Quiz</ion-label>
+       
+    </ion-segment-button>
+    <ion-segment-button value="vs" class="segment-main">
+      <img class="coin2" src="/assets/icon/wr.png"> 
+      <ion-label class="segment-label">Word<br>Power</ion-label>
+       
+    </ion-segment-button>
+
+     <ion-segment-button value="exam" class="segment-main">
+      <img class="coin2" src="/assets/icon/vsb.png">
+      <ion-label class="segment-label">Vs<br>Battle</ion-label>
+       
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="type">
+    <ion-list routerLink="/detail" class="list_new" *ngSwitchCase="'play'" lines="none">
+
+      <div href="/detail" class="back_item" *ngFor="let item of [].constructor(6); let i = index">
+
+         <ion-row>
+          <ion-col size="6" class="left">
+            <h5>GK Quiz <span class="green">Live</span></h5>
+          </ion-col>
+          <ion-col size="6" class="right">
+            <p>(Winner Announcement:01:30pm)</p>
+          </ion-col>
+        </ion-row>
+
+
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/gk.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+          <img src="/assets/icon/trophy.png">
+          <p>Play & Win: <span>$150</span></p>
+        </div>
+      </ion-item>
+
+      <ion-row>
+          <ion-col size="4">
+            <h5 class="green">84454 Users playing</h5>
+          </ion-col>
+          <ion-col size="4">
+           <div class="mg_5 color_ent">Entry <img class="coin" src="/assets/icon/coin.png"> <span>$50</span></div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button class="prime" color="tertiary">Play Now</ion-button>
+          </ion-col>
+        </ion-row>
+
+      </div>
+
+
+
+    </ion-list>
+
+    <ion-list class="list_new" *ngSwitchCase="'crick'" lines="none">
+
+      <div class="back_item" *ngFor="let item of [].constructor(6); let i = index">
+
+         <ion-row>
+          <ion-col size="6" class="left">
+            <h5>GK Quiz <span class="green">Live</span></h5>
+          </ion-col>
+          <ion-col size="6" class="right">
+            <p>(Winner Announcement:01:30pm)</p>
+          </ion-col>
+        </ion-row>
+
+
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/gk.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+          <img src="/assets/icon/trophy.png">
+          <p>Play & Win: <span>$150</span></p>
+        </div>
+      </ion-item>
+
+      <ion-row>
+          <ion-col size="4">
+            <h5 class="green">84454 Users playing</h5>
+          </ion-col>
+          <ion-col size="4">
+           <div class="mg_5 color_ent">Entry <img class="coin" src="/assets/icon/coin.png"> <span>$50</span></div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button class="prime" color="tertiary">Play Now</ion-button>
+          </ion-col>
+        </ion-row>
+
+      </div>
+
+
+
+    </ion-list>
+
+    <ion-list class="list_new" *ngSwitchCase="'pred'" lines="none">
+
+      <div class="back_item" *ngFor="let item of [].constructor(6); let i = index">
+
+         <ion-row>
+          <ion-col size="6" class="left-1">
+            <p>Everybody Win Cash</p>
+          </ion-col>
+          <ion-col size="6" class="right">
+            <p>(Winner Announcement:01:30pm)</p>
+          </ion-col>
+        </ion-row>
+
+
+      <ion-item class="item_new">
+
+        <div class="right_sed">
+          <img src="/assets/icon/cricketplyer.png">
+          <br>
+          <p>player Name</p>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="right_sed">
+          <img src="/assets/icon/cricketplyer.png">
+          <br>
+          <p>player Name</p>
+        </div>
+
+        <div class="right_sed">
+          <p>Predict & Win</p>
+          <h5>$50</h5>
+          <p>Rank Breakup</p>
+        </div>
+
+
+      </ion-item>
+
+      <ion-row>
+          <ion-col size="4">
+            <h5 class="green">84454 Users playing</h5>
+          </ion-col>
+          <ion-col size="4">
+           <div class="mg_5 color_ent">Entry <img class="coin" src="/assets/icon/coin.png"> <span>$50</span></div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button class="prime" color="tertiary">Play Now</ion-button>
+          </ion-col>
+        </ion-row>
+
+      </div>
+
+
+
+    </ion-list>
+
+    <ion-list class="list_new" *ngSwitchCase="'celeb'" lines="none">
+
+      <div class="back_item" *ngFor="let item of [].constructor(6); let i = index">
+
+         <ion-row>
+          <ion-col size="6" class="left">
+            <h5>GK Quiz <span class="green">Live</span></h5>
+          </ion-col>
+          <ion-col size="6" class="right">
+            <p>(Winner Announcement:01:30pm)</p>
+          </ion-col>
+        </ion-row>
+
+
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/gk.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+          <img src="/assets/icon/trophy.png">
+          <p>Play & Win: <span>$150</span></p>
+        </div>
+      </ion-item>
+
+      <ion-row>
+          <ion-col size="4">
+            <h5 class="green">84454 Users playing</h5>
+          </ion-col>
+          <ion-col size="4">
+           <div class="mg_5 color_ent">Entry <img class="coin" src="/assets/icon/coin.png"> <span>$50</span></div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button class="prime" color="tertiary">Play Now</ion-button>
+          </ion-col>
+        </ion-row>
+
+      </div>
+
+
+
+    </ion-list>
+
+
+  </div>
+
+
+</ion-content>
+
+
+<div class="ion-padding-horizontal">
+          <ion-chip outline color="white">
+            <ion-label>recent winners</ion-label>
+          </ion-chip>
+          <ion-chip outline color="white">
+            <ion-label>Get upto $29</ion-label>
+          </ion-chip>
+          <ion-chip outline color="white">
+            <ion-label>Get $10 PayTm</ion-label>
+          </ion-chip>
+</div>
+
+</ion-content>

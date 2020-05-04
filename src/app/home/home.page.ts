@@ -9,18 +9,21 @@ import { ModalpopupPage } from '../modalpopup/modalpopup.page';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  type:string;
-  constructor( private modalController:ModalController) {
-     this.type = "play";
-   }
 
-   async OpenModal() {
-   const modal = this.modalController.create(
-   {component:ModalpopupPage,
-   cssClass: 'phone-modal'});
+  public type = '';
 
-   return (await modal).present();
-   }
+  constructor(private modalController: ModalController) {
+    this.type = "play";
+  }
+
+  async OpenModal() {
+    const modal = this.modalController.create({
+      component: ModalpopupPage,
+      cssClass: 'phone-modal'
+    });
+
+    return (await modal).present();
+  }
 
   ngOnInit() {
   }

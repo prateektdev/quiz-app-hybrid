@@ -1,0 +1,97 @@
+
+<ion-header [translucent]="true" class="background_img">
+  <ion-toolbar class="background_img">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Coin Earnings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+<div class="listbx">
+   
+   <div class="text_bs">
+
+     <ion-list class="list_new" lines="none" routerLink="/quiz">
+
+      <div class="back_item" *ngFor="let item of [].constructor(1); let i = index">
+       <div class="right_sec">
+           <p>Your Current Balance: <span class="color_yel">10 coins</span></p>
+        </div>
+       
+      <ion-item class="item_new">
+
+        <ion-thumbnail slot="start" class="img_thumb">
+          <img src="/assets/icon/coin.png">
+        </ion-thumbnail>
+        <div class="right_sec">
+           <p><span class="color_yel">10 coins</span></p>
+        </div>
+        <ion-button class="prime" color="tertiary">Get Free Coins</ion-button>
+      </ion-item>
+
+      </div>
+
+
+
+    </ion-list>
+   </div>
+  
+
+   <br>
+
+
+
+</div>
+
+<div class="listview">
+  <ion-segment class="segment-main-dv" color="primary" [(ngModel)]="type" (ionChange)="segmentChanged($event)" >
+
+    <ion-segment-button value="play" checked class="segment-main">
+      
+      <ion-label class="segment-label">Earning History</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="crick" class="segment-main">
+      
+      <ion-label class="segment-label">Used History</ion-label>
+    </ion-segment-button>
+    
+  </ion-segment>
+
+  <div [ngSwitch]="type">
+    <ion-list class="list_new" *ngSwitchCase="'play'">
+
+      <div class="back_item" *ngFor="let item of [].constructor(1); let i = index">
+
+         <ion-item>
+            <ion-label>Video Reward<br><span class="date">08:41:PM| 03-05-2020</span></ion-label>
+            <ion-note slot="end">11<br><span class="date">Coins</span></ion-note>
+          </ion-item>
+
+      </div>
+
+
+
+    </ion-list>
+
+    <ion-list class="list_new" *ngSwitchCase="'crick'">
+
+      <div class="back_item" *ngFor="let item of [].constructor(2); let i = index">
+
+         <ion-item>
+            <ion-label>Video Reward<br><span class="date">08:41:PM| 03-05-2020</span></ion-label>
+            <ion-note slot="end">11<br><span class="date">Coins</span></ion-note>
+          </ion-item>
+
+      </div>
+
+
+
+    </ion-list>
+</div>
+</div>
+
+</ion-content>
